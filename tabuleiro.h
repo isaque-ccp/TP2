@@ -19,9 +19,11 @@ class Tabuleiro{
     Tabuleiro(int dimensao);
     ~Tabuleiro();
 
-    void proximaGen();
     void aumentaTamanho();
     int contarVizinhos(int x, int y);
+    void atualizarTabuleiro();
+    void exibir();
+    void mudaEstado(int x, int y);
 };
 
 #endif
