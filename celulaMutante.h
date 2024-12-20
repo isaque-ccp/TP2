@@ -5,9 +5,9 @@
 
 class CelulaMutante : public Celula{
     public:
-    CelulaMutante(bool estadoInicial);
+    CelulaMutante(int x,int y, bool vida);
     ~CelulaMutante();
+    void interagir(int vizinhosVivos) override;
 
-    void virtual interagir(int vizinhosVivos) override;
 };
 #endif

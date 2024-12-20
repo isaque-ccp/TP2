@@ -14,17 +14,14 @@ class Tabuleiro{
     int dimensao_;
     const int tamanhoMax_;
     Celula*** grade_;
-    Celula*** aux_;
 
     public:
     Tabuleiro(int dimensao);
     ~Tabuleiro();
 
-    void adicionaCelula(int coordX, int coordY, Celula* celula);
     void proximaGen();
-    void imprimir() const;
-    Celula* criaCelulasAleatoriamente();
-
+    void aumentaTamanho();
+    int contarVizinhos(int x, int y);
 };
 
 #endif

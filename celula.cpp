@@ -1,14 +1,20 @@
 #include "celula.h"
 
-Celula::Celula(bool estadoAtual):
-estadoAtual_(estadoAtual){}
+Celula::Celula(int x , int y , bool vida):
+x_(x),y_(y),vida_(vida){}
 
-Celula::~Celula(){}
-
-void Celula::atualizaEstado(){
-    estadoAtual_ = proximoEstado_; 
+int Celula::getX(){
+    return x_;
 }
 
-bool Celula::isAlive(){
-    return estadoAtual_;
+int Celula::getY(){
+    return y_;
+}
+
+bool Celula::getVida(){
+    return vida_;
+}
+
+void Celula::setVida(bool vida){
+    vida_ = vida;
 }

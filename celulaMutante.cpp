@@ -1,10 +1,8 @@
 #include "celulaMutante.h"
 
-CelulaMutante::CelulaMutante(bool estadoInicial):
-Celula(estadoInicial){}
+CelulaMutante::CelulaMutante(int x, int y, bool vida):
+Celula(x,y,vida){}
 
-CelulaMutante::~CelulaMutante(){}
-
-void CelulaMutante::interagir(int numeroVizinhos){
-    proximoEstado_ = !estadoAtual_;
+void CelulaMutante::interagir(int vizinhosVivos){
+    vida_ = !vida_;
 }

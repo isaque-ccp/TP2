@@ -5,7 +5,7 @@
 
 class CelulaImortal : public Celula{
     public:
-    CelulaImortal();
+    CelulaImortal(int x,int y , bool vida);
     ~CelulaImortal();
 
     void virtual interagir(int vizinhosVivos) override;

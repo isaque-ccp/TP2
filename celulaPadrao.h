@@ -5,9 +5,10 @@
 
 class CelulaPadrao : public Celula{
     public:
-    CelulaPadrao(bool estadoInicial);
+    CelulaPadrao(int x,int y, bool vida);
     ~CelulaPadrao();
+    void interagir(int vizinhoVivos) override;
 
-    void virtual interagir(int vizinhosVivos) override;
+   
 };
 #endif

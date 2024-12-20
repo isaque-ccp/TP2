@@ -3,16 +3,17 @@
 
 class Celula{
     protected:
-    bool estadoAtual_; 
-    bool proximoEstado_;
-
+        bool vida_;
+        int x_,y_;
+    
     public:
-    Celula(bool estadoAtual); //construtor de celula
-    ~Celula();
+        Celula(int x, int y, bool vida);
+        virtual void interagir(int vizinhoVivos) = 0;
+        bool getVida();
+        void setVida(bool vida);
+        int getX();
+        int getY();
 
-    virtual void interagir(int vizinhosVivos) = 0; //metodo poliformico
-    void atualizaEstado(); //metodo para atualizar o estado da celula
-    bool isAlive(); //metodo que retorna estado da celula
 
 };
 #endif
